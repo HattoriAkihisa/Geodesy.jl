@@ -43,6 +43,10 @@ export
     UTMZfromLLA, LLAfromUTMZ, UTMZfromECEF, ECEFfromUTMZ, ENUfromUTMZ, UTMZfromENU,
     UTMZfromUTM, UTMfromUTMZ,
 
+    # propagation of variance and covariance
+    CovECEF, CovENU, matcov, covmat,
+    CovENUfromECEF, CovECEFfromENU,
+
     # Datum transformations
     datum_shift_ECEF,
     ITRF, GDA94,
@@ -60,5 +64,6 @@ include("conversion.jl")
 include("distances.jl")
 include("utm.jl")
 include("datum_transformations.jl")
+include("covariance_matrices.jl")
 
 end # module Geodesy
